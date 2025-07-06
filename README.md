@@ -1,4 +1,4 @@
-# 💰 Spendly - Persona### 💳 **Smart Transaction Management**
+# 💰 Spendly - Finance tracking app
 - Add, edit, and delete income/expense transactions
 - Categorize transactions for better organization
 - Advanced filtering by date, category, and type
