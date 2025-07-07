@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ========================================
    SPENDLY - MAIN STYLES
    Modern Glassmorphism Dark Theme
@@ -18,10 +19,78 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
+=======
+/* Import external fonts and CSS modules first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import './styles/enhanced-colors.css';
+@import './styles/modern-cards.css';
+@import './styles/mobile-interactions.css';
+@import './styles/typography.css';
+@import './styles/responsive.css';
+@import './styles/dark-mode-enhancements.css';
+@import './styles/accessibility.css';
+@import './styles/utilities.css';
+
+/* Tailwind directives must come after @import statements */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* Dark theme variables (default) */
+  --bg-primary: #0A0A0F;
+  --bg-secondary: #121218;
+  --bg-tertiary: #1A1A23;
+  --bg-card: #1E1E2F;
+  --bg-card-hover: #252538;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8BCC8;
+  --text-muted: #6B7280;
+  --border-primary: #2D2D3A;
+  --border-secondary: #404057;
+  --accent-primary: #8AB4F8;
+  --accent-secondary: #B388FF;
+  --accent-tertiary: #BB86FC;
+  --success: #34D399;
+  --warning: #FBBF24;
+  --error: #F87171;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] {
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F5F5F5;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F9FAFB;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6B7280;
+  --border-primary: #E5E7EB;
+  --border-secondary: #D1D5DB;
+  --accent-primary: #3B82F6;
+  --accent-secondary: #8B5CF6;
+  --accent-tertiary: #A855F7;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+>>>>>>> 66d2cba (Prepare Spendly for public GitHub release: demo data only for demo user, improved light mode, theme toggle, demo login button, code cleanup)
 }
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -1619,6 +1688,108 @@ button:focus,
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
   animation-fill-mode: both;
+=======
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--bg-card-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-minimal {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.glass {
+  background: rgba(30, 30, 47, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-secondary);
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-primary);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.border-primary {
+  border-color: var(--border-primary);
+}
+
+.accent-primary {
+  color: var(--accent-primary);
+}
+
+.accent-secondary {
+  color: var(--accent-secondary);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px var(--accent-primary); }
+  50% { box-shadow: 0 0 20px var(--accent-primary); }
+>>>>>>> 66d2cba (Prepare Spendly for public GitHub release: demo data only for demo user, improved light mode, theme toggle, demo login button, code cleanup)
 }
 
 @keyframes fadeInUp {
@@ -1632,6 +1803,7 @@ button:focus,
   }
 }
 
+<<<<<<< HEAD
 /* Essential page header styling */
 .dashboard-header {
   margin-bottom: 2rem;
@@ -2310,3 +2482,47 @@ button:focus,
 }
 
 /* ============ END MICRO-ANIMATIONS ============ */
+=======
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Theme toggle switch */
+.theme-switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: var(--border-secondary);
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-switch.active {
+  background-color: var(--accent-primary);
+}
+
+.theme-switch-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--bg-primary);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-switch.active .theme-switch-handle {
+  transform: translateX(24px);
+}
+>>>>>>> 66d2cba (Prepare Spendly for public GitHub release: demo data only for demo user, improved light mode, theme toggle, demo login button, code cleanup)

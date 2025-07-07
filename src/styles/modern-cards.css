@@ -1,0 +1,243 @@
+/* ===== MODERN CARD SYSTEM ===== */
+
+.card-modern {
+  background: var(--dark-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: var(--shadow-dark-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-modern:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-dark-lg);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-modern:hover::before {
+  opacity: 1;
+}
+
+.card-glass {
+  background: rgba(36, 36, 70, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-elevated {
+  background: var(--dark-bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 
+    var(--shadow-dark-lg),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-minimal {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.card-minimal:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Card content spacing */
+.card-content {
+  padding: 24px;
+}
+
+.card-content-sm {
+  padding: 16px;
+}
+
+.card-content-lg {
+  padding: 32px;
+}
+
+/* Card headers */
+.card-header {
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Status indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.status-dot-success {
+  background: var(--success-500);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.status-dot-warning {
+  background: var(--warning-500);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.status-dot-error {
+  background: var(--error-500);
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+/* Modern progress bars */
+.progress-modern {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 8px;
+  background: var(--gradient-primary);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    transparent 100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Metric cards */
+.metric-card {
+  background: var(--card-modern);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.metric-change {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.metric-change.positive {
+  color: var(--success-500);
+}
+
+.metric-change.negative {
+  color: var(--error-500);
+}
+
+/* Interactive elements */
+.interactive-card {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.interactive-card:active {
+  transform: scale(0.98);
+}
+
+.interactive-card:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Dark mode adjustments */
+[data-theme="light"] .card-modern {
+  background: white;
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .card-modern:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gray-300);
+}
+
+[data-theme="light"] .card-glass {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    var(--shadow-xl),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .progress-modern {
+  background: var(--gray-200);
+}
+
+[data-theme="light"] .metric-card {
+  background: white;
+  border-color: var(--gray-200);
+}

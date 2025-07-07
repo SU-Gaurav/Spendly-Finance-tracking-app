@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💰 Spendly - Finance tracking app
 - Add, edit, and delete income/expense transactions
 - Categorize transactions for better organization
@@ -88,10 +89,85 @@ A modern, feature-rich React-based personal finance tracker designed to help you
    ```
 
 2. **Install dependencies**:
+=======
+# 💸 Spendly - Smart Finance Tracker
+
+A modern, responsive personal finance tracker built with React, Vite, Tailwind CSS, and Framer Motion. Track your expenses, manage group budgets, and stay on top of your financial goals with style!
+
+## ✨ Features
+
+### 🏠 Dashboard
+- **Overview Cards**: Total spent, weekly budget, and goal progress with animated progress bars
+- **Interactive Charts**: Daily/weekly expense visualization using Chart.js
+- **Celebration System**: Animated badges with confetti when you save money
+- **Shame Mode**: AI-generated roasts with witty messages when you overspend
+- **Smart Mascot**: Animated piggy bank that reacts to your spending trends
+
+### 💰 Expense Management
+- **Quick Entry Modal**: Stylish modal with blurred background
+- **Category Selection**: Floating buttons with modern icons (Food, Transport, Shopping, Entertainment)
+- **Smart Inputs**: Auto-complete and quick-add buttons for common expenses
+- **Real-time Updates**: Instant feedback and smooth animations
+
+### 👥 Group Budgets
+- **Multiple Groups**: Manage expenses with roommates, friends, or travel groups
+- **Visual Split**: Pie charts showing who spent what
+- **Progress Tracking**: Ring charts for group budget vs spending
+- **Chat Interface**: Activity feed with message-style expense logs
+- **Settle Up**: Easy expense splitting and settlement
+
+### ⚙️ Settings & Customization
+- **Dark/Light Mode**: Toggle between themes
+- **Currency Support**: Multiple currency options (₹, $, €, £)
+- **Export Options**: Download CSV reports or sync with Google Sheets
+- **Shame Mode Toggle**: Enable/disable playful spending alerts
+- **Data Management**: Import, export, and reset functionality
+
+## 🎨 Design Features
+
+### Visual Elements
+- **3D Cards**: Soft shadows and rounded corners with hover effects
+- **Glassmorphism**: Frosted glass effects with backdrop blur
+- **Gradient Themes**: Vibrant color schemes (indigo-purple, teal-orange)
+- **Smooth Animations**: Framer Motion for page transitions and interactions
+
+### Responsive Design
+- **Mobile-First**: Optimized for all screen sizes
+- **Adaptive Layout**: Grid and flex utilities for perfect layouts
+- **Touch-Friendly**: Large buttons and gesture support
+
+## 🛠️ Tech Stack
+
+- **React 18** - Modern React with hooks
+- **Vite** - Lightning-fast build tool
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations and transitions
+- **Chart.js** - Beautiful, responsive charts
+- **Lucide React** - Modern icon library
+- **Canvas Confetti** - Celebration animations
+- **React Router** - Client-side routing
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/spendly.git
+   cd spendly
+   ```
+
+2. **Install dependencies**
+>>>>>>> 66d2cba (Prepare Spendly for public GitHub release: demo data only for demo user, improved light mode, theme toggle, demo login button, code cleanup)
    ```bash
    npm install
    ```
 
+<<<<<<< HEAD
 3. **Start the development server**:
    ```bash
    npm start
@@ -213,11 +289,88 @@ Found a bug or have a feature idea? Please open an issue on GitHub with:
 - Steps to reproduce (for bugs)
 - Expected vs actual behavior
 - Screenshots if applicable
+=======
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+### Build for Production
+```bash
+npm run build
+npm run preview
+```
+
+## 📱 Usage
+
+### Adding Expenses
+1. Click the "Add Expense" button (+ icon)
+2. Enter amount, select category, and add description
+3. Use quick-add buttons for common amounts
+4. Submit to see real-time updates
+
+### Managing Groups
+1. Navigate to Groups page
+2. Select or create a new group
+3. View expense splits and activity
+4. Add group expenses and settle up
+
+### Customizing Settings
+1. Go to Settings page
+2. Toggle dark mode, shame mode, and notifications
+3. Change currency and export preferences
+4. Manage data and security options
+
+## 🎯 Key Features Showcase
+
+### Shame Mode 🔥
+Get playful roasts when overspending:
+- "Looks like your wallet is on a diet, but your spending isn't!"
+- Animated flame icons and witty messages
+- Helps keep you accountable with humor
+
+### Smart Mascot 🐷
+Your personal finance companion:
+- Reacts to spending patterns
+- Provides helpful tips and encouragement
+- Animated based on budget progress
+
+### Celebration System 🎉
+- Confetti animations for savings milestones
+- Animated success messages
+- Positive reinforcement for good habits
+
+## 🎨 Color Palette
+
+```css
+/* Primary Gradients */
+--gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+--gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+--gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+--gradient-warning: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+--gradient-danger: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+```
+
+## 🔮 Future Enhancements
+
+- [ ] Firebase integration for real-time data
+- [ ] Bank account linking
+- [ ] AI-powered spending insights
+- [ ] Bill reminders and recurring expenses
+- [ ] Advanced reporting and analytics
+- [ ] Social features and challenges
+- [ ] Investment tracking
+- [ ] Budget recommendations
+>>>>>>> 66d2cba (Prepare Spendly for public GitHub release: demo data only for demo user, improved light mode, theme toggle, demo login button, code cleanup)
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+<<<<<<< HEAD
 ## 🙏 Acknowledgments
 
 - React team for the amazing framework
@@ -240,3 +393,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [⭐ Star this repo](https://github.com/yourusername/spendly-finance-tracker) | [🍴 Fork it](https://github.com/yourusername/spendly-finance-tracker/fork) | [🐛 Report bugs](https://github.com/yourusername/spendly-finance-tracker/issues)
 
 </div>
+=======
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 💬 Support
+
+Need help? Reach out:
+- Email: support@spendly.app
+- GitHub Issues: [Report a bug](https://github.com/your-username/spendly/issues)
+
+---
+
+Made with ❤️ for better financial tracking
+>>>>>>> 66d2cba (Prepare Spendly for public GitHub release: demo data only for demo user, improved light mode, theme toggle, demo login button, code cleanup)

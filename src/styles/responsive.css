@@ -1,0 +1,109 @@
+/* Enhanced Responsive Design System */
+
+/* Mobile-First Breakpoints */
+:root {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* Touch-Friendly Sizing */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.touch-target-large {
+  min-height: 56px;
+  min-width: 56px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Increase touch targets on mobile */
+  .btn {
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  /* Improve card spacing */
+  .card {
+    margin: 16px;
+    padding: 20px;
+  }
+  
+  /* Stack navigation items */
+  .nav-desktop {
+    display: none;
+  }
+  
+  .nav-mobile {
+    display: flex;
+  }
+  
+  /* Full-width modals on mobile */
+  .modal {
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+    min-height: 50vh;
+  }
+  
+  /* Sticky bottom actions */
+  .bottom-actions {
+    position: sticky;
+    bottom: 0;
+    padding: 16px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+  }
+}
+
+/* Desktop Optimizations */
+@media (min-width: 1024px) {
+  /* Hover states */
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Keyboard navigation */
+  .keyboard-focus:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+  }
+  
+  /* Side-by-side layouts */
+  .desktop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* Gesture-Friendly Swipe Areas */
+.swipe-area {
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.swipe-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Loading States */
+.skeleton {
+  background: linear-gradient(90deg, var(--muted) 25%, var(--muted-light) 50%, var(--muted) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
